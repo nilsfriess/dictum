@@ -21,7 +21,7 @@ app.use(function(req, res, next) {
     next();
 })
 
-app.get('/word/:word', (req, res, next) => {
+app.get('/api/:word', (req, res, next) => {
     console.log(req.params.word)
 
     let wordIsValid = words.words.indexOf(req.params.word) !== -1
@@ -35,6 +35,6 @@ app.get('/word/:word', (req, res, next) => {
 
 })
 
-app.listen(3200, () => {
+app.listen(15123, () => {
     console.log('app listening')
 })
