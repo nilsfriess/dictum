@@ -5,7 +5,7 @@ let mysql = require('mysql')
 let connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'sqlroot',
+    password: '4Rour7gn.',
     database: 'word_list'
 })
 
@@ -43,7 +43,7 @@ wordIsValid = (word, cb) => {
     })
 }
 
-app.get('/word/:word', (req, res, next) => {
+app.get('/api/:word', (req, res, next) => {
     wordIsValid(req.params.word, (isValid) => {
         res.json({
             word: req.params.word,
@@ -54,6 +54,6 @@ app.get('/word/:word', (req, res, next) => {
     })
 })
 
-app.listen(3200, () => {
+app.listen(15123, () => {
     console.log('app listening')
 })
